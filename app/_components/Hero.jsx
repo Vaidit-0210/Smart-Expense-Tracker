@@ -90,7 +90,7 @@ export default function Hero() {
         id="home"
         className="relative isolate px-6 pt-14 lg:px-8 animated-gradient"
       >
-        <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56 text-center">
+        <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-60 text-center">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}

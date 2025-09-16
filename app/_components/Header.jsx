@@ -1,5 +1,3 @@
-// components/Header.jsx
-
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -71,7 +69,7 @@ function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold text-white hover:text-indigo-400 transition-colors duration-300"
+              className="text-md font-semibold text-white hover:text-indigo-400 transition-colors duration-300"
             >
               {item.name}
             </Link>
@@ -83,7 +81,7 @@ function Header() {
           ) : (
             <Link
               href="/sign-in"
-              className="text-sm font-semibold text-white hover:text-indigo-400 transition-colors duration-300"
+              className="text-md font-semibold text-white hover:text-indigo-400 transition-colors duration-300"
             >
               Sign in <span aria-hidden="true">&rarr;</span>
             </Link>
@@ -100,10 +98,7 @@ function Header() {
             <div className="fixed inset-0 z-50 bg-black/30" />
             <DialogPanel
               as={motion.div}
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm shadow-lg"
             >
               <div className="flex items-center justify-between">
