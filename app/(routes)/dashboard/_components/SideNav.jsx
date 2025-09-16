@@ -35,7 +35,8 @@ function SideNav({ onLinkClick, showClose = false }) {
     <div className="h-screen p-5 border shadow-sm bg-gray-100 flex flex-col dark:bg-gray-800">
       {/* Logo + Close (close shown only when showClose=true) */}
       <div className="flex items-center justify-between">
-        <Image src={"/logo3.png"} alt="Logo" width={200} height={100} />
+        <Image src={"/logo3.png"} alt="Logo" width={200} height={100} className="block dark:hidden"/>
+          <Image src={"/logo4.png"} alt="Logo" width={200} height={100} className="hidden dark:block"/>
 
         {/* Close button next to logo (mobile only) */}
         {showClose && (
