@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useClerk } from "@clerk/nextjs";
-import { Sun, Moon, Menu } from "lucide-react"; // Menu icon
+import { Sun, Moon, Menu } from "lucide-react"; 
 import { Button } from "@/components/ui/button";
 
 function DashboardHeader({ onMenuClick }) {

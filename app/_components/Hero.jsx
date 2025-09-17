@@ -1,5 +1,3 @@
-// components/Hero.jsx
-
 "use client";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -15,7 +13,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ChatBot from "./ChatBot";
 
-// Reusable animation variant for sections
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -30,7 +27,6 @@ const sectionVariants = {
   },
 };
 
-// Reusable variant for individual items
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -90,7 +86,7 @@ export default function Hero() {
         id="home"
         className="relative isolate px-6 pt-14 lg:px-8 animated-gradient"
       >
-        <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-60 text-center">
+        <div className="mx-auto max-w-3xl py-60 text-center">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}

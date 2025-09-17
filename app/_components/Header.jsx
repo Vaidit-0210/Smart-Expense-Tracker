@@ -9,7 +9,6 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 
-// UPDATED: Navigation links to reflect the merged section
 const navigation = [
   { name: "Home", href: "#home" },
   { name: "Features", href: "#features" },

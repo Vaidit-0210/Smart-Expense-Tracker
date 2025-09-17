@@ -1,4 +1,3 @@
-// app/(routes)/dashboard/_components/SideNav.jsx
 "use client";
 import React from "react";
 import Image from "next/image";

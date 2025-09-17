@@ -9,7 +9,7 @@ export const metadata = {
   title: "Expense Tracker",
   description: "Track your expenses efficiently",
   icons: {
-    icon: '/logo5.png', // or remove this line entirely
+    icon: '/logo5.svg',
   },
 };
 
