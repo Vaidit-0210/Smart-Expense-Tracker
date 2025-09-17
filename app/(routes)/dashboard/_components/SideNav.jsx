@@ -11,6 +11,8 @@ import {
   ShieldCheck,
   User as UserIcon,
   X,
+  ChartCandlestick,
+  Calculator
 } from "lucide-react";
 
 function SideNav({ onLinkClick, showClose = false }) {
@@ -18,14 +20,11 @@ function SideNav({ onLinkClick, showClose = false }) {
     { id: 1, name: "Dashboard", icon: TvMinimal, path: "/dashboard" },
     { id: 2, name: "Income", icon: IndianRupee, path: "/dashboard/income" },
     { id: 3, name: "Budgets", icon: Landmark, path: "/dashboard/budgets" },
-    {
-      id: 4,
-      name: "Expenses",
-      icon: ReceiptText,
-      path: "/dashboard/expenses/latest",
-    },
-    { id: 5, name: "Plans", icon: ShieldCheck, path: "/dashboard/plans" },
-    { id: 6, name: "Profile", icon: UserIcon, path: "/dashboard/profile" },
+    { id: 4, name: "Expenses", icon: ReceiptText, path: "/dashboard/expenses/latest"},
+    { id: 5, name: "Tools", icon: Calculator, path: "/dashboard/tools" },
+    { id: 6, name: "Market", icon: ChartCandlestick, path: "/dashboard/market" },
+    { id: 7, name: "Plans", icon: ShieldCheck, path: "/dashboard/plans" },
+    { id: 8, name: "Profile", icon: UserIcon, path: "/dashboard/profile" }
   ];
 
   const path = usePathname();

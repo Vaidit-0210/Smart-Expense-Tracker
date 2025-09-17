@@ -54,7 +54,7 @@ export default function ChatBot() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about expenses, SIPs..."
-              className="flex-1 p-2 border rounded text-sm"
+              className="flex-1 p-2 border rounded text-sm text-black dark:bg-gray"
             />
             <button
               onClick={sendMessage}
