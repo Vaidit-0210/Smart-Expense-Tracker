@@ -79,8 +79,8 @@ function Dashboard() {
           <PieChartDashboard budgetList={budgetList} />
 
         </div>
-        <div className='grid gap-5'>
-          <h2 className='font-bold text-lg' >Your Budgets</h2>
+        <div className='md:col-span-1 space-y-3'>
+          <h2 className='font-bold text-lg'>Your Budgets</h2>
           {budgetList.map((budget,index)=>(
             <BudgetItem key={index} budget={budget} />
           ))}

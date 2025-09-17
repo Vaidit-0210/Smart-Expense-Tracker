@@ -26,7 +26,7 @@ function CardInfo({budgetList}) {
 
   return (
     <div>
-    {budgetList?.length > 0 ?
+    {budgetList?.length >= 0 ?
     <div className='mt-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
         <div className='p-7 border rounded-lg flex justify-between items-center'>
             <div>

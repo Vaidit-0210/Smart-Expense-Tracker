@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Check, Star, Zap, Users, Shield } from 'lucide-react';
+import { Check, Star, Zap, Users, Shield, BadgeCheck } from 'lucide-react';
 
 export default function PricingPage() {
   const [selectedPlan, setSelectedPlan] = useState(null);
@@ -36,7 +36,6 @@ export default function PricingPage() {
         'Priority support',
         'Advanced analytics',
         'Export to Excel/PDF',
-        'Custom categories'
       ],
       buttonText: 'Get Started',
       buttonStyle: 'bg-white text-indigo-600 hover:bg-gray-100',
@@ -53,7 +52,6 @@ export default function PricingPage() {
         'Shared team dashboard',
         'Role-based access',
         'Dedicated account manager',
-        'Team collaboration tools',
         'Advanced reporting',
         'API access'
       ],
@@ -69,7 +67,7 @@ export default function PricingPage() {
     if (plan.id === 'free') {
       // Simulate redirect to dashboard for free plan
       setTimeout(() => {
-        alert('🎉 Welcome to Smart Expense Tracker! Redirecting to dashboard...');
+        alert('🎉 Welcome to Smart Expense Tracker!');
       }, 500);
     } else {
       setShowModal(true);
@@ -80,7 +78,7 @@ export default function PricingPage() {
     setShowModal(false);
     // Simulate payment processing
     setTimeout(() => {
-      alert(`✅ Payment Successful! Welcome to ${selectedPlan.name} plan! Redirecting to dashboard...`);
+      alert(`✅ Payment Successful! Welcome to ${selectedPlan.name} plan!`);
       setSelectedPlan(null);
     }, 1000);
   };
@@ -91,17 +89,17 @@ export default function PricingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-blue-50">
+    <div className="min-h-screen bg-indigo-50 dark:bg-gray-500">
       {/* Header Section */}
       <div className="text-center py-16 px-6">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
+          <h1 className="text-5xl font-extrabold mb-4">
             Choose Your Plan
           </h1>
-          <p className="text-xl text-gray-600 mb-4">
+          <p className="text-xl mb-4">
             Start managing your expenses smarter with our flexible pricing options
           </p>
-          <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
+          <div className="flex items-center justify-center space-x-4 text-sm">
             <div className="flex items-center space-x-2">
               <Check className="w-4 h-4 text-green-500" />
               <span>30-day money-back guarantee</span>
@@ -141,10 +139,10 @@ export default function PricingPage() {
                 <div className="text-center">
                   {/* Icon */}
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-6 ${
-                    plan.popular ? 'bg-white bg-opacity-20' : 'bg-indigo-100'
+                      plan.popular ? 'bg-white bg-opacity-20' : 'bg-indigo-100'
                   }`}>
                     <Icon className={`w-6 h-6 ${
-                      plan.popular ? 'text-white' : 'text-indigo-600'
+                      plan.popular ? 'text-black' : 'text-indigo-600'
                     }`} />
                   </div>
 
