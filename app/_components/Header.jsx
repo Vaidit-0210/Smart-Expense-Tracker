@@ -40,7 +40,7 @@ function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-gray-900/80 backdrop-blur-sm shadow-lg"
+          ? "bg-gray-500/80 backdrop-blur-sm shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -50,14 +50,14 @@ function Header() {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center">
-            <Image src="/logo4.png" alt="Logo" width={160} height={100} />
+            <Image src="/logo3.png" alt="Logo" width={160} height={100} />
           </Link>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="h-6 w-6" />
@@ -68,7 +68,7 @@ function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-md font-semibold text-white hover:text-indigo-400 transition-colors duration-300"
+              className="text-md font-semibold text-black hover:text-white transition-colors duration-300"
             >
               {item.name}
             </Link>
@@ -80,7 +80,7 @@ function Header() {
           ) : (
             <Link
               href="/sign-in"
-              className="text-md font-semibold text-white hover:text-indigo-400 transition-colors duration-300"
+              className="text-md font-semibold text-black hover:text-white transition-colors duration-300"
             >
               Sign in <span aria-hidden="true">&rarr;</span>
             </Link>
@@ -102,7 +102,7 @@ function Header() {
             >
               <div className="flex items-center justify-between">
                 <Link href="/" className="-m-1.5 p-1.5">
-                  <Image src="/logo3.png" alt="Logo" width={120} height={80} />
+                  <Image src="/logo3.png" alt="Logo" width={160} height={100} />
                 </Link>
                 <button
                   type="button"

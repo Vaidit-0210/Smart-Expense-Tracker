@@ -86,7 +86,7 @@ export default function Hero() {
         id="home"
         className="relative isolate px-6 pt-14 lg:px-8 animated-gradient"
       >
-        <div className="mx-auto max-w-3xl py-60 text-center">
+        <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-60 text-center">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ export default function Hero() {
               From tracking expenses to generating insights, our tools help you manage money better and save more.
             </p>
           </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl grid gap-8 sm:grid-cols-2">
+          <div className="mx-auto mt-16 max-w-8xl sm:mt-20 lg:mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature) => (
               <motion.div
                 key={feature.name}
@@ -183,7 +183,6 @@ export default function Hero() {
                 whileHover={{ y: -10 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                {/* UPDATED: Simple card with no image */}
                 <Card className="rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 h-full">
                   <CardHeader>
                     <CardTitle className="text-xl font-semibold">
@@ -203,7 +202,6 @@ export default function Hero() {
         </div>
       </motion.section>
 
-      {/* NEW: Merged About & Contact Section */}
       <motion.section
         id="about-contact"
         className="bg-slate-50 py-24 sm:py-32"

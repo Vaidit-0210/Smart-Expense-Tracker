@@ -89,7 +89,7 @@ export default function PricingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-indigo-50 dark:bg-gray-500">
+    <div className="min-h-screen bg-indigo-50 dark:bg-gray-700">
       {/* Header Section */}
       <div className="text-center py-16 px-6">
         <div className="max-w-3xl mx-auto">
@@ -122,8 +122,8 @@ export default function PricingPage() {
                 key={plan.id}
                 className={`relative rounded-2xl p-8 shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105 ${
                   plan.popular
-                    ? 'bg-gradient-to-b from-indigo-600 to-indigo-700 text-white ring-4 ring-indigo-300'
-                    : 'bg-white text-gray-900 ring-1 ring-gray-200'
+                    ? 'bg-indigo-600 text-white ring-4 ring-indigo-300'
+                    : 'bg-white text-gray-900 ring-1 ring-gray-200 dark:bg-gray-200'
                 }`}
               >
                 {/* Popular Badge */}
