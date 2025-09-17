@@ -66,27 +66,27 @@ export default function Hero() {
     {
       title: "Top 5 Tips to Save Money Every Month",
       desc: "Learn simple yet effective strategies to save money and build better financial habits.",
-      link: "/blog/save-money-tips",
+      link: "/blog",
     },
     {
       title: "How to Track Daily Expenses Effectively",
       desc: "Master the art of tracking expenses to stay in control of your finances.",
-      link: "/blog/track-expenses",
+      link: "/blog",
     },
     {
       title: "Best Budgeting Strategies for Students",
       desc: "Discover budgeting methods that help students manage their limited income smartly.",
-      link: "/blog/student-budgeting",
+      link: "/blog",
     },
   ];
 
   return (
-    <div className="bg-white text-gray-900">
+    <div className="h-screen bg-white text-gray-900">
       <section
         id="home"
-        className="relative isolate px-6 pt-14 lg:px-8 animated-gradient"
+        className="relative isolate flex min-h-screen items-center px-6 pt-14 lg:px-8 animated-gradient"
       >
-        <div className="mx-auto max-w-3xl py-32 sm:py-48 lg:py-60 text-center">
+        <div className="mx-auto w-full max-w-3xl py-32 sm:py-48 lg:py-60 text-center">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
