@@ -24,4 +24,4 @@ export const Incomes = pgTable("incomes", {
     transactionDate: timestamp("transaction_date", { withTimezone: true }).notNull(),
     createdBy: varchar("createdBy").notNull(),
     createdAt: timestamp("createdAt", { withTimezone: true }).notNull().defaultNow()
-});
+}); 

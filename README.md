@@ -1,92 +1,134 @@
-Smart Expense Tracker - A Next.js Financial Dashboard
+# Smart Expense Tracker
 
 <p align="center">
-  <img src="logo6.png" alt="Logo" width="250"/>
+  <img src="public/logo6.png" alt="Smart Expense Tracker Logo" width="250"/>
 </p>
 
-Live URL
-https://smart-expense-tracker-cyan.vercel.app/
+## Overview
 
-Overview
-Smart Expense Tracker is a full-stack financial management application built with Next.js. It provides a clean, intuitive interface for users to track income, log expenses, create budgets, and monitor the stock and cryptocurrency markets in real-time. The project is designed to be a one-stop solution for personal financial oversight.
+Smart Expense Tracker is a full-stack financial dashboard built with Next.js, Neon (PostgreSQL), Clerk authentication, and Tailwind CSS.  
+It helps users manage their finances by tracking income, expenses, budgets, and monitoring stock/crypto markets in real-time.  
+The app features a modern UI, secure authentication, and interactive charts for a seamless personal finance experience.
 
-✨ Core Features
-📊 Interactive Dashboard: A central hub for a quick overview of your financial health, including recent transactions and budget status.
+**Live Demo:**  
+[https://smart-expense-tracker-cyan.vercel.app/](https://smart-expense-tracker-cyan.vercel.app/)
 
-💸 Income & Expense Tracking: Seamlessly log all income sources and daily expenses with a user-friendly interface.
+---
 
-🎯 Budget Management: Create and manage custom budgets for different spending categories to prevent overspending and achieve financial goals.
+## Features
 
-📈 Live Market Watch: A dedicated page to view real-time price data for popular Indian stocks (BSE) and major cryptocurrencies.
+- **Dashboard:** Quick overview of your financial health, recent transactions, and budget status.
+- **Income & Expense Tracking:** Log all income sources and daily expenses.
+- **Budget Management:** Create/manage budgets for different categories.
+- **Market Watch:** View real-time prices for Indian stocks and major cryptocurrencies.
+- **Stock & Crypto Search:** Instantly look up price info for any stock or crypto.
+- **Authentication:** Secure sign-in/sign-up powered by Clerk.
+- **Notifications:** Elegant toast notifications via Sonner.
+- **Dark/Light Mode:** Automatic theme switching with logo adaptation.
 
-🔍 Stock & Crypto Search: Instantly look up the latest price information for any stock or cryptocurrency.
+---
 
-🔐 User Authentication: Secure sign-in and sign-up functionality powered by Clerk to protect your financial data.
+## Environment Variables
 
-🚀 Efficient Data Caching: Implements a smart multi-layer caching strategy (client-side localStorage and server-side API route caching) to ensure a fast, responsive experience while respecting API rate limits.
+Create a `.env.local` file in your project root and add the following variables:
 
-🛠️ Tech Stack
-Framework: Next.js (React)
-
-Database: Neon (PostgreSQL)
-
-Authentication: Clerk
-
-Styling: Tailwind CSS
-
-UI Components: Shadcn UI
-
-Icons: Lucide React
-
-AI / Generative: Google Gemini API
-
-Financial Data API: Alpha Vantage
-
-Notifications: Sonner for elegant toast notifications.
-
-🚀 How to Run Locally
-1. Clone the Repository
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd your-repo-name
-
-2. Install Dependencies
-Install the necessary project dependencies using your preferred package manager:
-
-npm install
-# or
-yarn install
-
-3. Set Up Environment Variables
-This project requires several API keys and credentials to function fully.
-
-Create a file named .env.local in the root of your project by copying the example file:
-
-(.env.example) .env.local
-
-(If you don't have an .env.example, just create .env.local manually.)
-
-Add the following variables to your .env.local file and replace the placeholder values with your actual credentials:
-
+```env
 # Neon Database Connection URL
-# Get this from your Neon console under 'Connection Details'
 NEXT_PUBLIC_DATABASE_URL="YOUR_NEON_DATABASE_URL"
 
 # Clerk Authentication Keys
-# Get these from your Clerk dashboard -> API Keys
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="YOUR_CLERK_PUBLISHABLE_KEY"
 CLERK_SECRET_KEY="YOUR_CLERK_SECRET_KEY"
 
-# Google Gemini API Key for AI features
-# Get this from Google AI Studio -> Get API Key
+# Google Gemini API Key (for AI features)
 GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
 
-# Alpha Vantage API Key for market data
-# Get this from [https://www.alphavantage.co/support/#api-key](https://www.alphavantage.co/support/#api-key)
+# Alpha Vantage API Key (for market data)
 ALPHA_VANTAGE_API_KEY="YOUR_ALPHA_VANTAGE_API_KEY"
+```
 
-4. Run the Development Server
-Start the Next.js development server:
+---
 
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Set Up Environment Variables
+
+Copy `.env.example` to `.env.local` and fill in your credentials as shown above.
+
+### 4. Run Database Migrations (Drizzle ORM)
+
+```bash
+npm run db:push
+```
+
+### 5. Start the Development Server
+
+```bash
 npm run dev
+```
 
-Open http://localhost:3000 with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## Routing & Page Structure
+
+- `/` : Landing page (Hero, Features, Blog, About)
+- `/sign-in` : Clerk authentication page (redirects to `/dashboard` after login)
+- `/dashboard` : Main dashboard overview
+- `/dashboard/income` : Income tracking and analytics
+- `/dashboard/expenses` : Expenses list and analytics
+- `/dashboard/expenses/[id]` : Expense details for a specific budget
+- `/dashboard/budgets` : Budget management
+- `/dashboard/market` : Stock and crypto market watch
+- `/dashboard/tools` : Financial tools/calculators
+- `/dashboard/plans` : Financial planning
+- `/dashboard/profile` : User profile and settings
+
+**Sidebar navigation** automatically highlights the current page and adapts logo for dark/light mode.
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js (React)
+- **Database:** Neon (PostgreSQL)
+- **ORM:** Drizzle ORM
+- **Authentication:** Clerk
+- **Styling:** Tailwind CSS
+- **UI Components:** Shadcn UI
+- **Icons:** Lucide React
+- **Notifications:** Sonner
+- **Financial Data API:** Alpha Vantage
+- **AI Features:** Google Gemini API
+
+---
+
+## Contributing
+
+Feel free to fork this repo, open issues, or submit pull requests to improve the project!
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+**Enjoy tracking your finances with Smart Expense Tracker!**
