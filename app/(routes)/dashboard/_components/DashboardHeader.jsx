@@ -29,7 +29,7 @@ function DashboardHeader({ onMenuClick }) {
 
   return (
     <header className="p-4 shadow-sm border-b flex justify-between items-center bg-white dark:bg-gray-800 z-40 sticky top-0">
-      {/* Left side: Menu button (only on mobile) */}
+
       <button
         className="md:hidden p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
         onClick={onMenuClick}
@@ -37,7 +37,6 @@ function DashboardHeader({ onMenuClick }) {
         <Menu className="h-6 w-6 text-gray-700 dark:text-gray-200" />
       </button>
 
-      {/* Right side */}
       <div className="flex items-center gap-4 ml-auto">
         <button
           onClick={toggleTheme}

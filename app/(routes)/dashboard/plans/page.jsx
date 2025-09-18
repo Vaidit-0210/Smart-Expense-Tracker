@@ -65,7 +65,6 @@ export default function PricingPage() {
   const handlePlanSelect = (plan) => {
     setSelectedPlan(plan);
     if (plan.id === 'free') {
-      // Simulate redirect to dashboard for free plan
       setTimeout(() => {
         alert('🎉 Welcome to Smart Expense Tracker!');
       }, 500);
@@ -76,7 +75,6 @@ export default function PricingPage() {
 
   const handlePaymentDemo = () => {
     setShowModal(false);
-    // Simulate payment processing
     setTimeout(() => {
       alert(`✅ Payment Successful! Welcome to ${selectedPlan.name} plan!`);
       setSelectedPlan(null);
@@ -90,7 +88,6 @@ export default function PricingPage() {
 
   return (
     <div className="min-h-screen bg-indigo-50 dark:bg-gray-700">
-      {/* Header Section */}
       <div className="text-center py-16 px-6">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-5xl font-extrabold mb-4">
@@ -112,7 +109,6 @@ export default function PricingPage() {
         </div>
       </div>
 
-      {/* Pricing Cards */}
       <div className="max-w-7xl mx-auto px-6 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {plans.map((plan) => {
@@ -126,7 +122,6 @@ export default function PricingPage() {
                     : 'bg-white text-gray-900 ring-1 ring-gray-200 dark:bg-gray-200'
                 }`}
               >
-                {/* Popular Badge */}
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="flex items-center space-x-1 bg-gradient-to-r from-orange-400 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
@@ -137,7 +132,7 @@ export default function PricingPage() {
                 )}
 
                 <div className="text-center">
-                  {/* Icon */}
+        
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-6 ${
                       plan.popular ? 'bg-white bg-opacity-20' : 'bg-indigo-100'
                   }`}>
@@ -146,14 +141,14 @@ export default function PricingPage() {
                     }`} />
                   </div>
 
-                  {/* Plan Name */}
+              
                   <h3 className={`text-xl font-bold mb-2 ${
                     plan.popular ? 'text-white' : 'text-gray-900'
                   }`}>
                     {plan.name}
                   </h3>
 
-                  {/* Price */}
+               
                   <div className="mb-4">
                     <span className={`text-5xl font-extrabold ${
                       plan.popular ? 'text-white' : 'text-gray-900'
@@ -167,14 +162,14 @@ export default function PricingPage() {
                     </span>
                   </div>
 
-                  {/* Description */}
+              
                   <p className={`text-sm mb-6 ${
                     plan.popular ? 'text-indigo-100' : 'text-gray-600'
                   }`}>
                     {plan.description}
                   </p>
 
-                  {/* Features */}
+     
                   <ul className="space-y-3 mb-8 text-left">
                     {plan.features.map((feature, index) => (
                       <li key={index} className="flex items-start space-x-3">
@@ -190,7 +185,7 @@ export default function PricingPage() {
                     ))}
                   </ul>
 
-                  {/* Button */}
+            
                   <button
                     onClick={() => handlePlanSelect(plan)}
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl ${plan.buttonStyle}`}
@@ -204,7 +199,7 @@ export default function PricingPage() {
         </div>
       </div>
 
-      {/* Payment Modal */}
+
       {showModal && selectedPlan && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl">

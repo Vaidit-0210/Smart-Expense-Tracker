@@ -139,36 +139,23 @@ function MarketPage() {
 
     return (
         <div className="p-5 sm:p-10">
-            <div className="flex justify-between items-center mb-8">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 gap-4">
                 <div>
+                    <h2 className="font-bold text-3xl text-gray-800 dark:text-white">Market Overview</h2>
+                    <p className="text-gray-500 dark:text-white text-sm mt-1">
+                        Note: Data is cached. It updates automatically once a day or when you click refresh.
+                    </p>
                 </div>
-                <Button variant="outline" onClick={() => checkForUpdates(true)} disabled={loading}>
+                <Button variant="outline" className="dark:bg-gray-200 dark:text-black" onClick={() => checkForUpdates(true)} disabled={loading}>
                     <RefreshCw className={`mr-2 h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
                     Refresh Data
                 </Button>
             </div>
 
-            <div className="mb-10 bg-white p-6 rounded-2xl shadow-md border border-gray-100">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Search for a Stock</h3>
-                <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-4">
-                    <input 
-                        type="text" 
-                        value={searchSymbol}
-                        onChange={(e) => setSearchSymbol(e.target.value)}
-                        placeholder="Enter stock symbol (e.g., ITC)"
-                        className="flex-grow p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 transition"
-                    />
-                    <button type="submit" disabled={isSearching} className="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 disabled:bg-indigo-300 transition">
-                        {isSearching ? <Loader2 className="animate-spin mx-auto" /> : 'Search'}
-                    </button>
-                </form>
-                {searchResult && <div className="mt-6 animate-fade-in"><StockCard stock={searchResult} /></div>}
-            </div>
-
             <div className="mb-8">
-                <h2 className="font-bold text-3xl text-gray-800">Market Watch</h2>
-                <p className="text-gray-500">
-                    {lastUpdated ? `Last updated: ${lastUpdated.toLocaleString()}` : 'Real-time quotes for popular stocks.'}
+                <h2 className="font-bold text-3xl text-gray-800 dark:text-white">Market Watch</h2>
+                <p className="text-gray-500 dark:text-white">
+                    {lastUpdated ? `Displaying data from: ${lastUpdated.toLocaleString()}` : 'Popular Indian stocks.'}
                 </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
@@ -178,8 +165,8 @@ function MarketPage() {
             </div>
 
             <div className="mb-8">
-                <h2 className="font-bold text-3xl text-gray-800">Crypto Watch</h2>
-                <p className="text-gray-500">Real-time quotes for popular cryptocurrencies.</p>
+                <h2 className="font-bold text-3xl text-gray-800 dark:text-white">Crypto Watch</h2>
+                <p className="text-gray-500 dark:text-white">Real-time quotes for popular cryptocurrencies.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {cryptoData.length > 0 ? cryptoData.map(crypto => (

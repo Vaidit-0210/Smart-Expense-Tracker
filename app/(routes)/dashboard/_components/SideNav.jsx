@@ -31,12 +31,12 @@ function SideNav({ onLinkClick, showClose = false }) {
 
   return (
     <div className="h-screen p-5 border shadow-sm bg-gray-100 flex flex-col dark:bg-gray-800">
-      {/* Logo + Close (close shown only when showClose=true) */}
+
       <div className="flex items-center justify-between">
         <Image src={"/logo3.png"} alt="Logo" width={200} height={100} className="block dark:hidden"/>
           <Image src={"/logo4.png"} alt="Logo" width={200} height={100} className="hidden dark:block"/>
 
-        {/* Close button next to logo (mobile only) */}
+
         {showClose && (
           <button
             onClick={() => onLinkClick && onLinkClick()}
@@ -48,7 +48,6 @@ function SideNav({ onLinkClick, showClose = false }) {
         )}
       </div>
 
-      {/* Menu */}
       <nav className="mt-12 flex-1">
         {menuList.map((menu) => {
           const Active = path === menu.path;

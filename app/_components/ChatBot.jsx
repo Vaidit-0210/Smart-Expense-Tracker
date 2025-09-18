@@ -31,7 +31,7 @@ export default function ChatBot() {
     <div className="fixed bottom-5 right-5 z-50">
       {isOpen ? (
         <div className="w-80 h-96 bg-white shadow-lg rounded-lg flex flex-col border">
-          {/* Header */}
+         
           <div className="flex justify-between items-center p-3 bg-blue-600 text-white rounded-t-lg">
             <h2 className="font-bold">AI Finance Bot</h2>
             <button onClick={() => setIsOpen(false)}>
@@ -39,7 +39,6 @@ export default function ChatBot() {
             </button>
           </div>
 
-          {/* Messages */}
           <div className="flex-1 p-3 overflow-y-auto text-sm bg-gray-50">
             {messages.map((msg, i) => (
               <div key={i} className={`my-2 ${msg.role === "user" ? "text-blue-600 text-right" : "text-green-600 text-left"}`}>
@@ -48,7 +47,7 @@ export default function ChatBot() {
             ))}
           </div>
 
-          {/* Input */}
+          
           <div className="p-2 border-t flex">
             <input
               value={input}

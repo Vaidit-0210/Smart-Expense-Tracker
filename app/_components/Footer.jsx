@@ -12,10 +12,10 @@ export default function Footer() {
     <footer className="bg-gray-50 border-t border-gray-200 text-gray-600">
       <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          {/* Left side */}
+
           <p className="text-sm">&copy; 2025 Expense Tracker. All rights reserved.</p>
 
-          {/* Right side - Social links */}
+  
           <div className="mt-4 md:mt-0 flex space-x-6">
             <a href="#" className="hover:text-indigo-600">
               <FaFacebookF size={20} />
