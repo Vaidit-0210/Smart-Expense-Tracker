@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Budgets, Expenses } from 'utils/schema';
 import { db }from 'utils/dbConfig';
 import { toast } from 'sonner';
-import moment from 'moment';
 import { Loader } from 'lucide-react';
 
 function AddExpense({budgetId, user, refreshData}) {
@@ -20,7 +19,7 @@ function AddExpense({budgetId, user, refreshData}) {
             name:name,
             amount:amount,
             budgetId:budgetId,
-            createdAt:moment().format('DD/MM/YYYY')
+            createdAt:new Date().toISOString(),
         }).returning({insertedId:Budgets.id})
 
         setAmount('');

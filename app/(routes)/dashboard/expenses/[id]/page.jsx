@@ -64,7 +64,6 @@ function ExpensesScreen({params}) {
         .where(eq(Expenses.budgetId, resolvedParams.id))
         .orderBy(desc(Expenses.id))
         setExpensesList(result);
-        console.log(result);
     }
 
     /**
