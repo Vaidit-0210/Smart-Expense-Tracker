@@ -351,7 +351,7 @@ function AddIncomeDialog({ isOpen, onClose, onAdd }) {
                         <Input id="amount" type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="e.g. 15000" />
                     </div>
                      <div>
-                        <label htmlFor="date" className="text-sm font-medium">Date</label>
+                        <label htmlFor="date" className="text-sm font-medium dark:text-white">Date</label>
                         <Input id="date" type="date" value={transactionDate.toISOString().split('T')[0]} onChange={(e) => setTransactionDate(new Date(e.target.value))} />
                     </div>
                      <div>
