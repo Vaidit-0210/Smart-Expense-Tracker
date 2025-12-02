@@ -10,9 +10,6 @@ Smart Expense Tracker is a full-stack financial dashboard built with Next.js, Ne
 It helps users manage their finances by tracking income, expenses, budgets, and monitoring stock/crypto markets in real-time.  
 The app features a modern UI, secure authentication, and interactive charts for a seamless personal finance experience.
 
-**Live Demo:**  
-[https://smart-expense-tracker-cyan.vercel.app/](https://smart-expense-tracker-cyan.vercel.app/)
-
 ---
 
 ## Features
